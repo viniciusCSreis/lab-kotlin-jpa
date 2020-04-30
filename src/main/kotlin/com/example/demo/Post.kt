@@ -1,22 +1,19 @@
 package com.example.demo
 
-import java.util.ArrayList
 import javax.persistence.CascadeType
 import javax.persistence.Entity
 import javax.persistence.FetchType
 import javax.persistence.Id
 import javax.persistence.OneToMany
-import javax.persistence.Table
 
-@Entity(name = "Post")
-@Table(name = "post")
+@Entity
 data class Post (
 
     @Id
-    private val id: Long? = null,
+    val id: Long,
 
-    private val title: String? = null,
+    val title: String,
 
     @OneToMany(mappedBy = "post", cascade = [CascadeType.ALL], orphanRemoval = true,fetch = FetchType.LAZY)
-    private val comments: List<PostComment> = ArrayList<PostComment>()
+    val comments: List<PostComment>
 )

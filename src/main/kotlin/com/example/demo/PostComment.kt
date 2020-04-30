@@ -4,16 +4,14 @@ import javax.persistence.Entity
 import javax.persistence.FetchType
 import javax.persistence.Id
 import javax.persistence.ManyToOne
-import javax.persistence.Table
 
-@Entity(name = "PostComment")
-@Table(name = "post_comment")
+@Entity
 data class PostComment(
     @Id
-    private var id: Long? = null,
+    var id: Long,
 
-    private val review: String? = null,
+    val review: String,
 
     @ManyToOne(fetch = FetchType.LAZY)
-    private val post: Post? = null
+    val post: Post
 )
