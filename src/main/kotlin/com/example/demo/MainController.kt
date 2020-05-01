@@ -10,8 +10,8 @@ class MainController(
 
     @GetMapping("/search")
     fun search(): String {
-        postCommentRepository.findAll()
-        return "ok"
+        val result = postCommentRepository.findAll()
+        return "size:${result.size}"
 
     }
 
