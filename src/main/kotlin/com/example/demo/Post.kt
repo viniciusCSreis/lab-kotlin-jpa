@@ -1,5 +1,7 @@
 package com.example.demo
 
+import javax.persistence.Access
+import javax.persistence.AccessType
 import javax.persistence.CascadeType
 import javax.persistence.Entity
 import javax.persistence.FetchType
@@ -10,10 +12,11 @@ import javax.persistence.OneToMany
 data class Post (
 
     @Id
-    val id: Long,
+    @Access(AccessType.PROPERTY)
+    var id: Long,
 
     val title: String,
 
     @OneToMany(mappedBy = "post", cascade = [CascadeType.ALL], orphanRemoval = true,fetch = FetchType.LAZY)
-    val comments: List<PostComment>
+    var comments: MutableList<PostComment>
 )
