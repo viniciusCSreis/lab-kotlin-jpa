@@ -8,7 +8,7 @@ import javax.persistence.ManyToOne
 @Entity
 data class PostComment(
     @Id
-    var id: Long,
+    val id: Long,
 
     val review: String,
 
