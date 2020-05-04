@@ -18,7 +18,7 @@ webapp_1  | Hibernate: select post0_.id as id1_0_0_, post0_.title as title2_0_0_
 como podem ver um findAll está pegando os post mesmo com lazy
 
 
-ao adicionar ao pom (você pode olhar o pom da master para ver onde colocar esse pluginOptions)
+ao descomentar o pom (você pode olhar o pom da master para ver onde colocar esse pluginOptions)
 ```
 <pluginOptions>
     <option>spring:annotation=javax.persistence.Entity</option>
