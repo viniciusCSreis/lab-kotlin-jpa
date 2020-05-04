@@ -1,6 +1,6 @@
 Esse repo foi feito para testar o comportamento do jpa e o kotlin.
 
-#Para subir a aplicação é utilizado Java 8 e Mvn
+# Para subir a aplicação
 
 você não precisar ter java8 nen maven na sua maquina já que foi criado um docker para aplicação, para subir apenas utiliza o comando
 ```
